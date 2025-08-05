@@ -1,0 +1,34 @@
+/* Admin Dashboard */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+}
+.dashboard {
+    width: 20vh;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100vh;
+}
+.searchBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.heroBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.display {
+    display: flex;
+    flex-direction: row;
+}

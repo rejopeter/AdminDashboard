@@ -145,11 +145,10 @@ h1 {
     grid-area: search;
     display: grid;
     grid-template-rows: 50px;
-    grid-template-columns: min-content 4fr 1fr min-content max-content max-content;
-    justify-content: center;
+    grid-template-columns: auto 2fr 1fr auto auto auto;
     align-items: center;
     padding: 15px 15px 0;
-    gap: 10px;
+    gap: 25px;
     grid-template-areas: 
         "icon field . bell pic name";
 }
@@ -174,7 +173,7 @@ h1 {
 .heroBar {
     grid-area: hero;
     display: grid;
-    grid-template-columns: auto 4fr auto;
+    grid-template-columns: auto 2fr auto;
     grid-template-rows: auto;
     gap: 10px;
     padding: 10px;
@@ -187,8 +186,8 @@ h1 {
 
 .create {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 15px;
+    grid-template-columns: 2fr 2fr 2fr;
+    gap: 25px;
     align-items: center;
     align-content: center;
 }
@@ -210,24 +209,73 @@ button {
         "project announcements"
         "project trending";
     grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto max-content;
+    align-content: start;
+    align-items: start;
+    align-self: start;
+    justify-content: center;
+    gap: 10px;
 }
-
+.projects > h3 {
+    padding: 20px 20px 0;
+}
+.announcements > h3 {
+    padding: 20px 0px;
+}
+.trending > h3 {
+    padding: 20px 0px;
+}
 .projects {
     grid-area: project;
 }
 .card {
-    width: 250px;
-    height: fit-content;
+    height: auto;
     padding: 25px;
     background-color: white;
-    
+    border-left: #f0b429 solid 10px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr 1fr;
+    grid-template-areas: 
+        "title"
+        "descreption"
+        "."
+        "icons";
 }
-.announcements {
+.card > h3 {
+    grid-area: title;
+}
+.card > p {
+    grid-area: descreption;
+}
+.card > .cardIcon {
+    grid-area: icons;
+}
+.cardIcon {
+    display: grid;
+    grid-template-columns: min-content min-content min-content;
+    align-items: end;
+    justify-content: end;
+    gap: 10px;
+}
+.acont {
     grid-area: announcements;
+    padding: 20px;
 }
-
-.trending {
+.acont {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+.announceCont {
+    display: grid;
+    grid-template-rows: auto auto 10px;
+    padding: 10px;
+}
+.trendCont {
     grid-area: trending;
+    background-color: white;
+    border-radius: 10px;
 }
 
 input[type="search"] {
@@ -253,7 +301,7 @@ body {
 
 .pCont {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
-    gap: 10px;
-    padding: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }

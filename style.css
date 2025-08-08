@@ -5,30 +5,41 @@
     padding: 0;
 }
 
-body {
-    display: flex;
-    flex-direction: row;
-}
 .dashboard {
-    width: 20vh;
+    background-color: rgb(69, 144, 206);
+    grid-area: dash;
+    padding: 0 15px;
 }
 
-.main {
-    display: flex;
-    flex-direction: column;
-    width: 100vh;
-}
 .searchBar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    grid-area: search;
 }
+
 .heroBar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    grid-area: hero;
+}
+
+.display {
+    grid-area: main;
+}
+
+button {
+    background-color: rgb(69, 144, 206);
 }
 .display {
-    display: flex;
-    flex-direction: row;
+    background-color: rgb(227, 232, 239);
+}
+
+input[type="search"] {
+    background-color: rgb(227, 232, 239);
+}
+
+
+body {
+    display: grid;
+    grid-template-areas: 
+        "dash search"
+        "dash hero"
+        "dash main";
+    grid-template-columns: 1fr 6fr;
 }

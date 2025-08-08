@@ -5,11 +5,99 @@
     padding: 0;
 }
 
+svg {
+    width: 24px;
+    height: 24px;
+}
+
 .dashboard {
     background-color: rgb(69, 144, 206);
     grid-area: dash;
     padding: 0 15px;
+
 }
+.dashicon {
+    grid-area: icon;
+}
+h1 {
+    grid-area: text;
+}
+
+.dashtitle {
+    display: grid;
+    grid-template-areas: "icon text";
+    grid-template-columns: 28px 1fr;
+    align-items: center;
+    align-content: start;
+}
+#nav1 {
+    display: grid;
+    grid-template-areas: 
+        "homeicon hometext"
+        "profileicon profiletext"
+        "messageicon messagetext"
+        "historyicon historytext"
+        "taskicon tasktext"
+        "communityicon communitytext";
+    grid-template-columns: 28px 1fr;
+    align-items: center;
+    align-content: start;
+}
+.homeicon {
+    grid-area: homeicon;
+}
+.homet {
+    grid-area: hometext;
+}
+.profileicon {
+    grid-area: profileicon;
+}
+.profilet {
+    grid-area: profiletext;
+}
+.messagesicon {
+    grid-area: messageicon;
+}
+.messagest {
+    grid-area: messagetext;
+}
+.historyicon {
+    grid-area: historyicon;
+}
+.historyt {
+    grid-area: historytext;
+}
+.taskicon {
+    grid-area: taskicon;
+}
+.taskt {
+    grid-area: tasktext;
+}
+.communityicon {
+    grid-area: communityicon;
+}
+.communityt {
+    grid-area: communitytext;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .searchBar {
     grid-area: search;
@@ -28,12 +116,32 @@ button {
 }
 .display {
     background-color: rgb(227, 232, 239);
+    display: grid;
+    grid-template-areas: 
+        "project announcements"
+        "project trending";
+    grid-template-columns: 3fr 1fr;
+}
+
+.projects {
+    grid-area: project;
+}
+
+.announcements {
+    grid-area: announcements;
+}
+
+.trending {
+    grid-area: trending;
 }
 
 input[type="search"] {
     background-color: rgb(227, 232, 239);
 }
 
+ul {
+    list-style-type: none;
+}
 
 body {
     display: grid;
@@ -41,5 +149,10 @@ body {
         "dash search"
         "dash hero"
         "dash main";
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: 1fr 5fr;
+}
+
+.pCont {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
 }
